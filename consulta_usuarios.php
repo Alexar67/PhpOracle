@@ -8,7 +8,7 @@ try{
     $stmt = $pdo -> query($sql);
 
     while ($fila = $stmt -> fetch()){
-        echo $fila['ID_USUARIO','CEDULA','NOMBRES','APELLIDOS','CORREO', 'PASSWRD'] . "<br>";
+        echo $fila['ID_USUARIO'];
     }
 
 }catch(Throwable $e){
