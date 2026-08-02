@@ -15,7 +15,7 @@ declare(strict_types=1);
 function conectarOraclePdo(): \PDO
 {
     $usuario = getenv('ORACLE_USER') ?: 'APP';
-    $password = getenv('ORACLE_PASSWORD');
+    $password = getenv('ORACLE_PASSWORD') ?: 'App123';
     $host = getenv('ORACLE_HOST') ?: '192.168.1.30';
     $puerto = getenv('ORACLE_PORT') ?: '1521';
     $servicio = getenv('ORACLE_SERVICE') ?: 'MATT';
