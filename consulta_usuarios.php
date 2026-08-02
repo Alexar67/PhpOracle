@@ -8,7 +8,9 @@ try{
     $stmt = $pdo -> query($sql);
 
     while ($fila = $stmt -> fetch()){
-        echo $fila['ID_USUARIO'];
+        echo '<pre>';
+        echo htmlspecialchars(print_r($fila, true));
+        echo '</pre>';
     }
 
 }catch(Throwable $e){
